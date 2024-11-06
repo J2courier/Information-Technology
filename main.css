@@ -144,6 +144,7 @@ p{
     display: flex;
     justify-content: center;
     /* border: solid 1px white; */
+    border-width: 1px 0px 1px 0px;
     overflow-y: scroll;
     
 }
@@ -433,6 +434,7 @@ p{
 .design-item1:hover p ,
 .design-item2:hover p {
     background-color: #7100a9;
+    filter: drop-shadow(0px 0px 10px #7100a9);
     color: white;
 }
 
@@ -500,6 +502,7 @@ p{
 .lang-item3:hover p{
     color: white;
     background-color: #7100a9;
+    filter: drop-shadow(0px 0px 10px #7100a9);
 }
 
 .version-control h1 {
@@ -549,6 +552,7 @@ p{
 .version-item2:hover p,
 .version-item3:hover p {
     background-color: #7100a9;
+    filter: drop-shadow(0px 0px 10px #7100a9);
     color: white;
 }
 
@@ -881,6 +885,8 @@ p{
 .article5 span {
     color: rgb(255, 255, 255);
     font-size: 1.2em;
+    position: relative;
+    top: -5px;
 }
 
 .article1:hover,
@@ -1019,7 +1025,26 @@ p{
     height: 300px;
     border-radius: 5px;
     background: #3d005c;
-    box-shadow: 0px 0px 10px 0px #3d005c;
+    transition: all 0.5s ease;
+}
+
+.timeline li.glow::after {
+    background: #7100a9;
+    box-shadow: 0 0 15px #9800e5, 
+                0 0 25px #7100a9;
+    animation: timelineGlow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes timelineGlow {
+    from {
+        box-shadow: 0 0 15px #9800e5, 
+                    0 0 25px #7100a9;
+    }
+    to {
+        box-shadow: 0 0 20px #9800e5, 
+                    0 0 30px #7100a9,
+                    0 0 40px #4a0070;
+    }
 }
 
 .timeline li:last-child::after {
