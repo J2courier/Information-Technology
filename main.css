@@ -120,6 +120,22 @@ p{
     border: solid 1px #9800e5;
     transition: box-shadow 0.1s ease, transform 0.1s ease;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    gap: 10px;
+}
+
+.contain-btn-widget-items .btn1 img {
+    height: 80%;
+    width: auto;
+    object-fit: contain;
+}
+
+.contain-btn-widget-items .btn1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
 .contain-btn-widget-items a {
@@ -1184,4 +1200,83 @@ p{
     color: #ffffff;
     font-size: 0.9em;
     margin: 0;
+}
+
+.section-btn-history-html {
+    /* border: solid 1px white; */
+    height: 5%;
+    width: 15%;
+    display: flex;
+    justify-content: flex-start;
+    position: absolute;
+    left: 0%;
+    top: 1%;
+}
+.contain-btn-widget-history-html {
+    height: 100%;
+    width: 25%;
+    /* border: solid 1px yellow; */
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 100;
+    
+}
+
+.contain-btn-widget-items-history-html {
+    height: 100%;
+    width: 40%;
+    /* border: solid 1px white; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+
+    position: relative;
+    /* bottom: 100%; */
+}
+
+.contain-btn-widget-items-history-html button {
+    height: 100%;
+    width: 100%;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(251, 251, 251);
+    background-color: rgb(0, 0, 0);
+    border: solid 1px #9800e5;
+    transition: box-shadow 0.1s ease, transform 0.1s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    gap: 10px;
+}
+
+.contain-btn-widget-items-history-html .btn1 img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+.contain-btn-widget-items-history-html .btn1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.contain-btn-widget-items-history-html a {
+    height: 100%;
+}
+
+.contain-btn-widget-items-history-html button:hover {
+    background-color: #9900e5ae;
+}
+
+
+.contain-btn-widget-items-history-html button:active {
+  /* Shadow becomes slightly shorter to show pressed effect */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  transform: translateY(2px);  /* Button moves down slightly */
 }
