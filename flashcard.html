@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="flashcard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="img/Jfavicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <title>Flashcard</title>
+</head> 
+<body>
+        <div class="title">
+            <a href="index.html">Home</a>
+            <div class="contain-cancel-save">
+                <button class="cancel">cancel</button>
+                <button class="view" onclick="viewCards()">view</button>
+            </div>
+            
+        </div>
+        <div class="contain-create-flashcard">
+            <div class="item1">
+                <h1>Create Flashcard</h1>
+                <p>Enter Term and Definition to create a flashcard</p>
+                <input type="text" id="add-term" placeholder="Add Term">
+                <textarea name="add-definition" id="addDefinition" placeholder="Add Definition"></textarea>
+                <button id="addCardBtn">Add Card</button>
+            </div>
+        </div>
+        <div id="newCardContainer">
+            <!-- this section will be filled by the JS function using createElement('div'); -->
+            <!-- the term and definition will also be displayed here -->
+        </div>
+
+        <!-- Edit Modal -->
+        <div id="editModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Edit Flashcard</h2>
+                <input type="text" id="edit-term" placeholder="Edit Term">
+                <textarea id="edit-definition" placeholder="Edit Definition"></textarea>
+                <button id="saveEditBtn">Save</button>
+            </div>
+        </div>
+
+    <!-- </section> -->
+<script src="flashcard.js"></script>
+</body>
+</html>

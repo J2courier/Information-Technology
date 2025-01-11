@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="flashcard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="img/Jfavicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <title>Flashcards</title>
+</head>
+<body>
+    <div id="cardContainer"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cardContainer = document.getElementById('cardContainer');
+            const flashcards = JSON.parse(localStorage.getItem('flashcards')) || [];
+
+            flashcards.forEach(flashcard => {
+                const newCard = document.createElement('div');
+                newCard.classList.add('newCard');
+                cardContainer.appendChild(newCard);
+
+                const textDiv = document.createElement("div");
+                textDiv.classList.add("textDiv");
+                newCard.appendChild(textDiv);
+
+                const termH1 = document.createElement("h1");
+                termH1.textContent = flashcard.term; 
+                termH1.classList.add("termDisplay");
+                textDiv.appendChild(termH1);
+
+                const definitionP = document.createElement("p");
+                definitionP.textContent = flashcard.definition; 
+                definitionP.classList.add("definitionDisplay");
+                textDiv.appendChild(definitionP);
+            });
+        });
+    </script>
+</body>
+</html>

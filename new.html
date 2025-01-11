@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Flashcards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        #flashcard-container {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .flashcard {
+            width: 200px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+        .flashcard input,
+        .flashcard textarea {
+            margin-bottom: 10px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        #add-card-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #add-card-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Dynamic Flashcards</h1>
+<div id="flashcard-container"></div>
+<button id="add-card-btn">Add Card</button>
+
+<script>
+    const container = document.getElementById('flashcard-container');
+    const addCardButton = document.getElementById('add-card-btn');
+
+    addCardButton.addEventListener('click', () => {
+        // Create the flashcard div
+        const flashcard = document.createElement('div');
+        flashcard.className = 'flashcard';
+
+        // Create the term input
+        const termInput = document.createElement('input');
+        termInput.type = 'text';
+        termInput.placeholder = 'Enter term';
+
+        // Create the definition textarea
+        const definitionTextarea = document.createElement('textarea');
+        definitionTextarea.placeholder = 'Enter definition';
+
+        // Append inputs to the flashcard
+        flashcard.appendChild(termInput);
+        flashcard.appendChild(definitionTextarea);
+
+        // Append the flashcard to the container
+        container.appendChild(flashcard);
+    });
+</script>
+
+</body>
+</html>
